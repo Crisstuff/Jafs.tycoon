@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="index.html"><img src="bilder/jafs.jpeg"></a>
+        <p>Kebaber som er solgt</p>
+        <p id="rotteMelding"></p>
+        <br>
+        <p id="makkeMelding"></p>
+        <br>
+        <p id="katteMelding"></p>
+    </div>
+      
+    <div class="main">
+        <div class="penger-style">
+            <p id="penger">Du har: 200kr på kontoen</p>
+        </div>
+        <p>Trykk her for å kjøp kjøtt</p>
+        <br>
+        <div class="meat-type">
+            <br>
+            <p class="topp-kjøtt">Hilket kjøtt:</p>
+            <button onclick="fangMakke()">Fang en måke for 10kr</button>
+            <br><br>
+            <button onclick="kjopRotteFelle()">Kjøp rottefelle for 50kr</button>   
+            <br><br>
+            <button onclick="fangNaboKatt()">stjel nabo katt for 0kr</button>  
+            <br>
+            <br>
+    
+            <br>
+            <br>
+        </div>
+        <br>
+        <a class="info-styling"href="">Info om kjøtt</a>
+        <br>
+        <br>
+
+
+
+        <div class="container">
+            <div class="section">
+                <p id="rottefeller">Antall rottefeller du har: 0</p>
+            </div>
+            <!-- Add more sections as needed -->
+        </div>
+        
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
