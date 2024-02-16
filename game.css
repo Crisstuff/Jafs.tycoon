@@ -25,6 +25,18 @@ html, body {
   font-size: 2em;
 }
 
+.section2{
+  
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 .bottom-button {
   position: fixed;
   bottom: 20px;
@@ -47,12 +59,11 @@ html, body {
   left: 0;
   background-color: #FF8400;
   overflow-x: hidden;
-  padding-top: 20px;
+
   text-align: center;
 }
   
 .sidenav a {
-  padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #fffbfb;
@@ -94,8 +105,8 @@ html, body {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 350px;
-  position: fixed;
-  right: 1px;
+  position: absolute;
+  right: 9px;
 
 
 }
@@ -115,13 +126,6 @@ button:hover { /*styling for alle av knappene i spillet */
 }
 
 
-
-
-.container {
-  height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
 
 
 
