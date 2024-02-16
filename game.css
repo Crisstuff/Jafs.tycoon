@@ -30,6 +30,11 @@ html, body {
 }
 
 
+dialog{
+  width: 400px;
+  height: 500px;
+}
+
 
 
 

@@ -18,12 +18,14 @@ function kjopRotteFelle() {
         antallRottefeller++;
         oppdaterPenger();
         oppdaterRottefeller();
+        showRPopup();
         
         let nedtelling = 10;
         const rottefelleInterval = setInterval(function() {
             nedtelling--;
             if (nedtelling === 0) {
                 penger += 20;
+
                 oppdaterPenger();
                 nedtelling = 10;
 
@@ -54,9 +56,7 @@ function kjopRotteFelle() {
         alert('Du har ikke nok penger!');
     }
 }
-if(){
-    
-}
+
 
 
 
@@ -128,15 +128,12 @@ function scrollToNextSection() {
 
 
 
-function showPopup() {
-    var popUp = document.getElementById('popUp');
+function showRPopup() {
+    var popUp = document.getElementById('rPopUp');
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
     }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
  }
 
- function closePopup() {
-    var popUp = document.getElementById('popUp');
-    popUp.close();
- }
+
