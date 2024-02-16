@@ -102,14 +102,6 @@ function fangMakke() {
 
 
 
-
-
-
-
-
-
-
-
 function scrollToNextSection() {
     var currentSection = document.querySelector('.section:not([style*="display: none;"])');
     var nextSection = currentSection.nextElementSibling;
@@ -117,4 +109,17 @@ function scrollToNextSection() {
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
+}
+
+function showPopup() {
+    var popUp = document.getElementById('popUp');
+    popUp.showModal();
+    setTimeout(function() {
+       popUp.close();
+    }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+ }
+
+ function closePopup() {
+    var popUp = document.getElementById('popUp');
+    popUp.close();
+ }

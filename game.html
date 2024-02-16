@@ -24,14 +24,25 @@
                 <p id="penger">Du har: 200kr på kontoen</p>
             </div>
             <br>
+            <dialog id="popUp">
+                <h1><span id="hake">Dialog</span>-taggen</h1>
+                <hr />
+                <p>Dette er en dialogboks, den kan brukes 
+                   for å gi brukeren valgmenyer, advarsler, 
+                   søkefelt og mye mer
+                </p>
+                <button id="lukk" onClick="closePopup()">
+                   X
+                </button>
+            </dialog>
             <br>
             <div class="meat-type">
                 <br>
                 <p class="topp-kjøtt">Hilket kjøtt:</p>
                 <button onclick="fangMakke()">Fang en måke for 10kr</button>
-                <br><br>
+                <br>
                 <button onclick="kjopRotteFelle()">Kjøp rottefelle for 50kr</button>   
-                <br><br>
+                <br>
                 <button onclick="fangNaboKatt()">stjel nabo katt for 0kr</button>  
                 <br>
                 <a class="info-styling"href="">Info om kjøtt</a>

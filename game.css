@@ -93,7 +93,9 @@ html, body {
   background-color: #5CBD00;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: 400px;
+  width: 350px;
+  position: fixed;
+  right: 1px;
 
 
 }
