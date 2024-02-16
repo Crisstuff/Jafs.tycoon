@@ -73,6 +73,7 @@ function fangMakke() {
         // Hvis sjanse er mindre enn eller lik 20, brukeren har fanget en måke
         if (randomSjanse <= 20) {
             penger += 40; // Belønning for å fange måken
+            showMPopup();
             const melding = 'Du fanget en måke og fikk 40kr!';
             document.getElementById('makkeMelding').innerText = melding;
 
@@ -126,14 +127,20 @@ function scrollToNextSection() {
 }
 
 
-
-
 function showRPopup() {
     var popUp = document.getElementById('rPopUp');
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
     }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
- }
+}
+
+function showMPopup() {
+    var popUp = document.getElementById('mPopUp');
+    popUp.showModal();
+    setTimeout(function() {
+       popUp.close();
+    }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+}
 
 
