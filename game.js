@@ -104,13 +104,10 @@ function stjelNaboKatt(){
         oppdaterPenger()
         showKPopup();
         let nedtelling = 120;
-        const NaboInterval = setInterval(function(){
+        const element = setInterval(function(){
             nedtelling --;
             if(nedtelling=== 0){
             showKaPopup()
-            if (stjelKattInterval >= 5){
-                clearInterval(NaboInterval);
-            }
         }, 1000);
 }
 
