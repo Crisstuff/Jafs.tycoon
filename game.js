@@ -18,8 +18,8 @@ function oppdaterRottefeller() {
 }
 
 function kjopRotteFelle() {
-    if (penger >= 50) {
-        penger -= 50;
+    if (penger >= 100) {
+        penger -= 100;
         antallRottefeller++;
         oppdaterPenger();
         oppdaterRottefeller();
@@ -67,8 +67,8 @@ function kjopRotteFelle() {
 // Legg til en ny funksjon for å fange måker
 function fangMakke() {
     // Sjekk om brukeren har nok penger
-    if (penger >= 10) {
-        penger -= 10;
+    if (penger >= 5) {
+        penger -= 5;
 
         // Generer en tilfeldig sjanse (0-100)
         const randomSjanse = Math.floor(Math.random() * 100) + 1;
@@ -102,7 +102,7 @@ function fangMakke() {
 
 function kjopEkteKebab(){
     if (penger >= 1000){
-        penger += 1100;
+        penger += 1050;
         oppdaterPenger()
     } else {
         alert('Du har ikke nok penger!');
