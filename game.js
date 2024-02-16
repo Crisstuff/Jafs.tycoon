@@ -98,6 +98,23 @@ function fangMakke() {
     }
 }
 
+
+function stjelNaboKatt(){
+        penger+=80;
+        oppdaterPenger()
+        showKPopup();
+        let nedtelling = 120;
+        const NaboInterval = setInterval(function(){
+            nedtelling --;
+            if(nedtelling=== 0){
+            showKaPopup()
+            if (stjelKattInterval >= 5){
+                clearInterval(NaboInterval);
+            }
+        }, 1000);
+}
+
+
 function kjopEkteKebab(){
     if (penger >= 1000){
         penger += 1050;
@@ -118,8 +135,8 @@ function kjopEkteKebab(){
 
 
 function scrollToNextSection() {
-    var currentSection = document.querySelector('.section:not([style*="display: none;"])');
-    var nextSection = currentSection.nextElementSibling;
+    let currentSection = document.querySelector('.section:not([style*="display: none;"])');
+    let nextSection = currentSection.nextElementSibling;
   
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -128,19 +145,35 @@ function scrollToNextSection() {
 
 
 function showRPopup() {
-    var popUp = document.getElementById('rPopUp');
+    let popUp = document.getElementById('rPopUp');
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 function showMPopup() {
-    var popUp = document.getElementById('mPopUp');
+    let popUp = document.getElementById('mPopUp');
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+}
+
+function showKaPopup() {
+    let popUp = document.getElementById('kaPopUp');
+    popUp.showModal();
+    setTimeout(function() {
+       popUp.close();
+    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+}
+
+function showKPopup() {
+    let popUp = document.getElementById('kPopUp');
+    popUp.showModal();
+    setTimeout(function() {
+       popUp.close();
+    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 
