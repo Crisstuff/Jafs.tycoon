@@ -3,11 +3,6 @@ let antallRottefeller = 0;
 
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
-    if(penger == 0){ // fiks dette hvis penger= 0 skriver den du ikke har noe penger på 
-        
-        
-
-    }
 }
 
 function oppdaterRottefeller() {
@@ -59,8 +54,10 @@ function kjopRotteFelle() {
         alert('Du har ikke nok penger!');
     }
 }
+if(){
+    
+}
 
-''
 
 
 
@@ -108,6 +105,10 @@ function kjopEkteKebab(){
         alert('Du har ikke nok penger!');
     }
 }
+
+
+
+
 
 
 
