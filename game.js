@@ -100,6 +100,19 @@ function fangMakke() {
     }
 }
 
+function kjopEkteKebab(){
+    if (penger >= 1000){
+        penger += 1100;
+        oppdaterPenger()
+    } else {
+        alert('Du har ikke nok penger!');
+    }
+}
+
+
+
+
+
 
 
 function scrollToNextSection() {
@@ -110,6 +123,9 @@ function scrollToNextSection() {
       nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
+
+
+
 
 function showPopup() {
     var popUp = document.getElementById('popUp');
