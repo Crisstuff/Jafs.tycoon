@@ -24,9 +24,23 @@
             </div>
             <br>
             <br>
+            <dialog id="popUp">
+                <button id="lukk" onClick="closePopup()">
+                    X
+                 </button>
+                <h1><span id="hake">Dialog</span>-taggen</h1>
+                <hr />
+                <p>Dette er en dialogboks, den kan brukes 
+                   for å gi brukeren valgmenyer, advarsler, 
+                   søkefelt og mye mer
+                </p>
+                
+            </dialog>
+
             <dialog id="rPopUp">
                 <img src="bilder/rat.jpeg" width="400px">
             </dialog>
+
             <dialog id="mPopUp">
                 <img src="bilder/seagull.jpeg" width="500px" >
             </dialog>
@@ -34,14 +48,11 @@
             <div class="meat-type">
                 <p class="topp-kjøtt">kjøp eller stjel kjøtt:</p>
                 <button onclick="fangMakke()">Fang en måke for 5kr</button>
-                <br>
                 <button onclick="kjopRotteFelle()">Kjøp rottefelle for 100kr</button>   
-                <br>
                 <button onclick="stjelNaboKatt()">stjel nabo katt for 0kr</button>  
-                <br>
                 <button onclick="kjopEkteKebab()">kjøp kebab for 1000kr</button> 
-                <br> 
-                <a class="info-styling"href="">klikk for: Info om kjøtt</a>
+                <br>
+                <a class="info-styling" onclick="showPopup()">klikk for: Info om kjøtt</a>
                 <br><br>
             </div>
             <br>
