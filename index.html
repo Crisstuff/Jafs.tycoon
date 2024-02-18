@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="sidenav">
-        <a href="index.html"><img src="bilder/jafs.jpeg" width="300px"></a>
+        <img onclick="showPopup()" src="bilder/jafsstartbakgrunn.png" width="300px">
         <p class="sidenav-topptekst">Kebaber som selges:</p>
         <p id="rotteMelding"></p>
         <br>
@@ -30,7 +30,6 @@
                 <button id="lukk" onClick="closePopup()">
                     X
                 </button>
-                 
                 <h1><span id="hake">Jafs Tycoon</span>-Info</h1>
                 <hr />
                 <p>Gratulerer du har nettop blitt 18 år har 200kr på kontoen  
@@ -54,8 +53,10 @@
                 <li>
                     Normalt kebab-kjøtt = 500kr per trykk
                 </li>
-                <p><img src="bilder/jafs.jpeg"> Du kan trykke på dette symbolet 
-                    for å få opp denne informasjonen på nytt </p>
+                <p><img src="bilder/jafsstart.png"> 
+                    Du kan trykke på dette symbolet 
+                    for å få opp denne informasjonen på nytt 
+                </p>
                 <p>Målet ditt er å få kjøpt den nydeleige 
                     Obsall-Jafs for 1.000.000kr </p>
                 <li>
@@ -73,7 +74,7 @@
                 <li>Når du endelig får nokk penger kan du kjøpe ekte 
                     kebab kjøtt for 1000kr.
                 </li>
-                
+                <br>
             </dialog>
 
             <dialog id="rPopUp">
@@ -94,8 +95,6 @@
                 <button onclick="kjopRotteFelle()">Kjøp rottefelle for 100kr</button>   
                 <button onclick="stjelNaboKatt()">stjel nabo katt for 0kr</button>  
                 <button onclick="kjopEkteKebab()">kjøp kebab for 1000kr</button> 
-                <br>
-                <a class="info-styling" onclick="showPopup()">klikk for: Info om kjøtt</a>
                 <br><br>
             </div>
             <br>
