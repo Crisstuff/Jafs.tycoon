@@ -30,13 +30,13 @@ function kjopRotteFelle() {
                 nedtelling = 10;
 
                 // Melding når en rotte er fanget
-                const melding = '1 Rotte kebab solgt for rottefelle #' + antallRottefeller;
+                const melding = 'Rotte kebab solgt for 20kr rottefelle #' + antallRottefeller;
                 document.getElementById('rotteMelding').innerText = melding;
 
                 // Fjern meldingen etter 3 sekunder
                 setTimeout(() => {
                     document.getElementById('rotteMelding').innerText = '';
-                }, 3000);
+                }, 2000);
             } else {
                 // Nullstill meldingen hvis det ikke er noen rottefanget
                 document.getElementById('rotteMelding').innerText = '';
@@ -80,7 +80,7 @@ function fangMakke() {
             // Fjern meldingen etter 3 sekunder
             setTimeout(() => {
                 document.getElementById('makkeMelding').innerText = '';
-            }, 3000);
+            }, 2000);
         } else {
             // Hvis sjanse er over 20, brukeren klarte ikke å fange en måke
             const melding = 'Du klarte ikke å fange en måke!';
@@ -89,7 +89,7 @@ function fangMakke() {
             // Fjern meldingen etter 3 sekunder
             setTimeout(() => {
                 document.getElementById('makkeMelding').innerText = '';
-            }, 3000);
+            }, 2000);
         }
 
         oppdaterPenger();
@@ -104,8 +104,14 @@ function fangMakke() {
 
 function kjopEkteKebab(){
     if (penger >= 1000){
-        penger += 1050;
+        penger += 500;
         oppdaterPenger()
+        const melding = 'Ekte kebab solgt du fikk 500kr';
+        document.getElementById('kebabMelding').innerText = melding;
+        // Fjern meldingen etter 3 sekunder
+        setTimeout(() => {
+            document.getElementById('kebabMelding').innerText = '';
+        }, 2000);
     } else {
         alert('Du har ikke nok penger!');
     }
