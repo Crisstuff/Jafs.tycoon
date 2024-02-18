@@ -9,7 +9,7 @@
 <body>
     <div class="sidenav">
         <a href="index.html"><img src="bilder/jafs.jpeg" width="300px"></a>
-        <p>Kebaber som er solgt:</p>
+        <p class="sidenav-topptekst">Kebaber som er solgt:</p>
         <p id="rotteMelding"></p>
         <br>
         <p id="makkeMelding"></p>
@@ -23,6 +23,7 @@
                 <p id="penger">Du har: 200kr på kontoen</p>
             </div>
             <br>
+            <br>
             <dialog id="rPopUp">
                 <img src="bilder/rat.jpeg" width="400px">
             </dialog>
@@ -31,7 +32,7 @@
             </dialog>
             <br>
             <div class="meat-type">
-                <p class="topp-kjøtt">Hvilket kjøtt:</p>
+                <p class="topp-kjøtt">kjøp eller stjel kjøtt:</p>
                 <button onclick="fangMakke()">Fang en måke for 5kr</button>
                 <br>
                 <button onclick="kjopRotteFelle()">Kjøp rottefelle for 100kr</button>   
@@ -40,7 +41,7 @@
                 <br>
                 <button onclick="kjopEkteKebab()">kjøp kebab for 1000kr</button> 
                 <br> 
-                <a class="info-styling"href="">Info om kjøtt</a>
+                <a class="info-styling"href="">klikk for: Info om kjøtt</a>
                 <br><br>
             </div>
             <br>
@@ -50,7 +51,12 @@
         <div class="section">
             <!-- Innhold for andre seksjon her -->
             <div class="section2">
-                <p id="rottefeller">Antall rottefeller du har: 0</p>
+                <br>
+                <br>
+                <div>
+                    <img src="bilder/cat.jpeg" alt="">
+                    <p id="rottefeller">Antall rottefeller du har: 0</p>
+                </div>
             </div>
         </div>
         <button class="bottom-button" onclick="scrollToNextSection()">Dine resurser</button>

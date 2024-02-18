@@ -66,8 +66,9 @@ dialog{
   left: 0;
   background-color: #FF8400;
   overflow-x: hidden;
-
   text-align: center;
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
   
 .sidenav a {
@@ -80,25 +81,26 @@ dialog{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-
-#penger {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 10px;
-  background-color: #5CBD00;
-  padding: 10px;
+.sidenav-topptekst{
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
 
 .penger-style{
   font-size: 30px;
-  text-align: right;
-  top:0px;
   background-color: #5CBD00;
-  border-radius: 5px;
-  right: 20px;
   width: fit-content;
+  text-align: right;
+  position: fixed;
+  top:5px;
+  right: 30px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .topp-kjøtt {
   font-size: 25px;
@@ -107,15 +109,12 @@ dialog{
 }
 
 .meat-type{
+  float: right;
   border-radius: 6px;
   background-color: #5CBD00;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 350px;
-  position: absolute;
-  right: 9px;
-
-
 }
 button{
   border-radius: 4px;

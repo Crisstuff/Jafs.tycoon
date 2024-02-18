@@ -136,7 +136,7 @@ function showRPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 function showMPopup() {
@@ -144,7 +144,7 @@ function showMPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 function showKaPopup() {
@@ -152,7 +152,7 @@ function showKaPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 function showKPopup() {
@@ -160,7 +160,7 @@ function showKPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 1000); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 
