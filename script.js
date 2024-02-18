@@ -1,5 +1,6 @@
 let penger = 200;
 let antallRottefeller = 0;
+let antallRottefanget = 0;
 
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
@@ -11,6 +12,15 @@ function oppdaterRottefeller() {
         document.getElementById('rottefeller').innerText = 'Du har ' + antallRottefeller + ' Rottefeller';
     }
 }
+oppdaterRottefanget() {
+    document.getElementById("rottefanget"). innerText = 'Du har fanget' + antallRottefanget + ' rotte  ';
+    if (antallRottefanget >= 2){
+        document.getElementById("rottefanget"). innerText = 'Du har fanget' + antallRottefanget + ' rotter  ';
+
+    }
+}
+
+
 
 function kjopRotteFelle() {
     if (penger >= 100) {
