@@ -1,6 +1,7 @@
-let penger = 200;
+let penger = 2000;
 let antallRottefeller = 0;
 let antallRottefanget = 0;
+let antallMakkefanget = 0;
 
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
@@ -12,11 +13,16 @@ function oppdaterRottefeller() {
         document.getElementById('rottefeller').innerText = 'Du har ' + antallRottefeller + ' Rottefeller';
     }
 }
-oppdaterRottefanget() {
-    document.getElementById("rottefanget"). innerText = 'Du har fanget' + antallRottefanget + ' rotte  ';
+function oppdaterRottefanget() {
+    document.getElementById("rottefanget"). innerText = 'Du har fanget ' + antallRottefanget + ' Rotte';
     if (antallRottefanget >= 2){
-        document.getElementById("rottefanget"). innerText = 'Du har fanget' + antallRottefanget + ' rotter  ';
-
+        document.getElementById("rottefanget"). innerText = 'Du har fanget ' + antallRottefanget + ' Rotter';
+    }
+}
+function oppdaterMakkefanget(){
+    document.getElementById("makkefanget"). innerText = 'Du har fanget ' + antallMakkefanget + ' Måke';
+    if(antallMakkefanget >= 2){
+        document.getElementById("makkefanget"). innerText = 'Du har fanget ' + antallMakkefanget + ' Måker';
     }
 }
 
@@ -35,12 +41,14 @@ function kjopRotteFelle() {
             nedtelling--;
             if (nedtelling === 0) {
                 penger += 20;
+                antallRottefanget++;
+                oppdaterRottefanget();
 
                 oppdaterPenger();
                 nedtelling = 10;
 
                 // Melding når en rotte er fanget
-                const melding = 'Rotte kebab solgt for 20kr rottefelle #' + antallRottefeller;
+                const melding = 'Rotte kebab solgt for 20kr fra felle #' + antallRottefeller;
                 document.getElementById('rotteMelding').innerText = melding;
 
                 // Fjern meldingen etter 3 sekunder
@@ -83,6 +91,7 @@ function fangMakke() {
         // Hvis sjanse er mindre enn eller lik 20, brukeren har fanget en måke
         if (randomSjanse <= 25) {
             penger += 40; // Belønning for å fange måken
+            antallMakkefanget++;
             showMPopup();
             const melding = 'Du fanget en måke og fikk 50kr!';
             document.getElementById('makkeMelding').innerText = melding;
@@ -101,7 +110,7 @@ function fangMakke() {
                 document.getElementById('makkeMelding').innerText = '';
             }, 2000);
         }
-
+        oppdaterMakkefanget();
         oppdaterPenger();
     } else {
         alert('Du har ikke nok penger!');
@@ -134,7 +143,7 @@ function kjopEkteKebab(){
 
 
 
-
+//scroll funsjon 
 function scrollToNextSection() {
     let currentSection = document.querySelector('.section:not([style*="display: none;"])');
     let nextSection = currentSection.nextElementSibling;
@@ -144,7 +153,7 @@ function scrollToNextSection() {
     }
 }
 
-
+//alle pop opp bilder
 function showPopup() {
     var popUp = document.getElementById('popUp');
     popUp.showModal();
