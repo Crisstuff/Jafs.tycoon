@@ -64,17 +64,17 @@ function kjopRotteFelle() {
 // Legg til en ny funksjon for å fange måker
 function fangMakke() {
     // Sjekk om brukeren har nok penger
-    if (penger >= 5) {
-        penger -= 5;
+    if (penger >= 20) {
+        penger -= 20;
 
         // Generer en tilfeldig sjanse (0-100)
         const randomSjanse = Math.floor(Math.random() * 100) + 1;
 
         // Hvis sjanse er mindre enn eller lik 20, brukeren har fanget en måke
-        if (randomSjanse <= 20) {
+        if (randomSjanse <= 25) {
             penger += 40; // Belønning for å fange måken
             showMPopup();
-            const melding = 'Du fanget en måke og fikk 40kr!';
+            const melding = 'Du fanget en måke og fikk 50kr!';
             document.getElementById('makkeMelding').innerText = melding;
 
             // Fjern meldingen etter 3 sekunder

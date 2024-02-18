@@ -39,6 +39,9 @@ dialog{
   width: fit-content;
   border: 5px solid #FF8400 ;
   padding: 0%;
+  background-color: #1C1B20;
+  color: #FFFFFF;
+  padding: 5px;
   border-radius: 2px;
 }
 
