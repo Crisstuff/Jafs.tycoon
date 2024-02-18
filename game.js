@@ -99,17 +99,7 @@ function fangMakke() {
 }
 
 
-function stjelNaboKatt(){
-        penger+=80;
-        oppdaterPenger()
-        showKPopup();
-        let nedtelling = 120;
-        const element = setInterval(function(){
-            nedtelling --;
-            if(nedtelling=== 0){
-            showKaPopup()
-        }, 1000);
-}
+
 
 
 function kjopEkteKebab(){
