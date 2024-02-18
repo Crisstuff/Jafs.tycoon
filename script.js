@@ -48,7 +48,7 @@ function kjopRotteFelle() {
                 nedtelling = 10;
 
                 // Melding når en rotte er fanget
-                const melding = 'Rotte kebab solgt for 20kr fra felle #' + antallRottefeller;
+                const melding = 'Rotte kebab solgt for 20kr fra felle ';
                 document.getElementById('rotteMelding').innerText = melding;
 
                 // Fjern meldingen etter 3 sekunder
@@ -117,7 +117,9 @@ function fangMakke() {
     }
 }
 
-
+function stjelNabokatt(){
+    
+}
 
 
 
