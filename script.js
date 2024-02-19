@@ -1,4 +1,4 @@
-let penger = 100000;
+let penger = 200;
 let antallRottefeller = 0;
 let antallRottefanget = 0;
 let antallMakkefanget = 0;
@@ -28,9 +28,9 @@ function oppdaterMakkefanget(){
     }
 }
 function oppdaterKatterfanget(){
-    document.getElementById("katterfanget"). innerText = 'Du har fanget ' + antallKatterfanget + ' Katt';
+    document.getElementById("katterfanget"). innerText = 'Du har stjelt ' + antallKatterfanget + ' Nabo-Katt';
     if(antallKatterfanget >= 2){
-        document.getElementById("katterfanget"). innerText = 'Du har fanget ' + antallKatterfanget + ' Katter';
+        document.getElementById("katterfanget"). innerText = 'Du har stjolet ' + antallKatterfanget + ' Nabo-Katter';
     }
 }
 
@@ -156,8 +156,8 @@ function disableButton(){
     console.log("knappen er deaktivert")
 }
 
-
 function enableButton() {
+    isButtonDisabled = false;
     // Implementer logikken for å aktivere knappen her
     console.log("Knappen er nå aktivert");
 }
@@ -255,7 +255,7 @@ function showKPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 500); 
+    }, 2000); 
 }
 
 

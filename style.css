@@ -33,7 +33,7 @@ html, body {
   text-align: center;
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+
 }
 
 
@@ -46,6 +46,7 @@ dialog{
   color: #FFFFFF;
   padding: 5px;
   border-radius: 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
