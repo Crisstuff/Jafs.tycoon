@@ -41,6 +41,10 @@
                     buisnissen er kebab kjøttet. Så du må begynne 
                     og tenke kreatift.
                 </p>
+                <p><img src="bilder/jafsstart.png"> 
+                    Du kan trykke på dette symbolet 
+                    for å få opp denne informasjonen på nytt 
+                </p>
                 <li>
                     1 Måke-kebab = 50kr
                 </li>
@@ -53,10 +57,7 @@
                 <li>
                     Normalt kebab-kjøtt = 500kr per trykk
                 </li>
-                <p><img src="bilder/jafsstart.png"> 
-                    Du kan trykke på dette symbolet 
-                    for å få opp denne informasjonen på nytt 
-                </p>
+                
                 <p>Målet ditt er å få kjøpt den nydeleige 
                     Obsall-Jafs for 1.000.000kr </p>
                 <li>
@@ -84,6 +85,9 @@
             <dialog id="mPopUp">
                 <img src="bilder/seagull.jpeg" width="500px" >
             </dialog>
+            <dialog id="kaPopUp">
+                <img src="bilder/cat.jpeg" width="330px" >
+            </dialog>
             <dialog id="kPopUp">
                 <img src="bilder/cat.jpeg" width="500px" >
             </dialog>
@@ -92,8 +96,8 @@
             <div class="meat-type">
                 <p class="topp-kjøtt">Kjøp eller stjel kjøtt:</p>
                 <button onclick="fangMakke()">Fang en måke for 20kr</button>
-                <button onclick="kjopRotteFelle()">Kjøp rottefelle for 100kr</button>   
-                <button onclick="stjelNaboKatt()">stjel nabo katt for 0kr</button>  
+                <button onclick="kjopRotteFelle()">Kjøp rottefelle for 100kr</button>  
+                <button onclick="stjelNaboKatt()">Stjel Nabo-katt for 0kr</button> 
                 <button onclick="kjopEkteKebab()">kjøp kebab for 1000kr</button> 
                 <br><br>
             </div>
@@ -108,7 +112,6 @@
             </div>
         </div>
         <div class="section">
-            <!-- Innhold for andre seksjon her -->
             <div class="section2">
                 <br>
                 <br>
@@ -121,12 +124,10 @@
                 </div>
                 <p id="rottefanget">Du har fanget 0 rotter</p>
                 <p id="makkefanget">Du har fanget 0 Måker</p>
+                <p id="katterfanget">Du har stjelt 0 nabo katter</p>
             </div>
         </div>
         <button class="bottom-button" onclick="scrollToNextSection()">Statistikk</button>
-
-
-        <!-- Add more sections as needed -->
     </div>
     <script src="script.js"></script>
 </body>

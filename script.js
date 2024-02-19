@@ -2,6 +2,7 @@ let penger = 2000;
 let antallRottefeller = 0;
 let antallRottefanget = 0;
 let antallMakkefanget = 0;
+let antallKatterfanget = 0;
 
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
@@ -23,6 +24,12 @@ function oppdaterMakkefanget(){
     document.getElementById("makkefanget"). innerText = 'Du har fanget ' + antallMakkefanget + ' Måke';
     if(antallMakkefanget >= 2){
         document.getElementById("makkefanget"). innerText = 'Du har fanget ' + antallMakkefanget + ' Måker';
+    }
+}
+function oppdaterKatterfanget(){
+    document.getElementById("katterfanget"). innerText = 'Du har fanget ' + antallKatterfanget + ' Katt';
+    if(antallKatterfanget >= 2){
+        document.getElementById("katterfanget"). innerText = 'Du har fanget ' + antallKatterfanget + ' Katter';
     }
 }
 
@@ -117,9 +124,41 @@ function fangMakke() {
     }
 }
 
-function stjelNabokatt(){
-    
+function enableButton() {
+    // Implementer logikken for å aktivere knappen her
+    console.log("Knappen er nå aktivert");
 }
+
+function stjelNaboKatt() {
+    if (true) { // Du trenger ikke å sjekke for penger her
+        // Legg til logikken for å stjele en nabo katt
+        penger+=100;
+        oppdaterPenger();
+        antallKatterfanget++;
+        oppdaterKatterfanget();
+        showKaPopup();
+        const melding = 'Du stjal en nabo katt og fikk 100kr!';
+        document.getElementById('katteMelding').innerText = melding;
+        setTimeout(() => {
+            document.getElementById('katteMelding').innerText = '';
+        }, 2000);
+
+        // Sett opp en timeout for å låse knappen i 2 minutter
+        setTimeout(function () {
+            enableButton(); // Funksjon for å aktivere knappen igjen
+            showKPopup();
+        }, 120000); // 2 minutter
+    } 
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,31 +194,39 @@ function scrollToNextSection() {
     }
 }
 
-//alle pop opp bilder
+
+
+// alle pop-up visninger ligger under
+// Venter til vinduet er lastet ned 
+window.onload = function() {
+    // Når vindu er lastet ned kjør denne funsjonen 
+    showPopup();
+};
+
+// Viser  pop-up
 function showPopup() {
     var popUp = document.getElementById('popUp');
     popUp.showModal();
-    if(closePopup<= true)
-    popUp.close();
- }
+}
 
- function closePopup() {
+// function som lukker popup 
+function closePopup() {
     var popUp = document.getElementById('popUp');
     popUp.close();
- }
+}
 
 
 
 
 
 
-
+// alle disse er like i koden ikke i id
 function showRPopup() {
     let popUp = document.getElementById('rPopUp');
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); // Lukk popup etter 500 millisekunder (0.5 sekunder)
 }
 
 function showMPopup() {
@@ -187,7 +234,7 @@ function showMPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); 
 }
 
 function showKaPopup() {
@@ -195,7 +242,7 @@ function showKaPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); 
 }
 
 function showKPopup() {
@@ -203,7 +250,7 @@ function showKPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 500); // Lukk popup etter 2000 millisekunder (2 sekunder)
+    }, 500); 
 }
 
 
