@@ -1,9 +1,10 @@
-let penger = 2000;
+let penger = 100000;
 let antallRottefeller = 0;
 let antallRottefanget = 0;
 let antallMakkefanget = 0;
 let antallKatterfanget = 0;
-
+// functionene under oppdaterer statistikken undeveis 
+// noen av dem har if for gramatiske grunner feks 1 katt 2 katter er ikke likt så da må det forandres
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
 }
@@ -34,7 +35,7 @@ function oppdaterKatterfanget(){
 }
 
 
-
+// function for å kjøpe rotte felle 
 function kjopRotteFelle() {
     if (penger >= 100) {
         penger -= 100;
@@ -97,7 +98,7 @@ function fangMakke() {
 
         // Hvis sjanse er mindre enn eller lik 20, brukeren har fanget en måke
         if (randomSjanse <= 25) {
-            penger += 40; // Belønning for å fange måken
+            penger += 70; // Belønning for å fange måken
             antallMakkefanget++;
             showMPopup();
             const melding = 'Du fanget en måke og fikk 50kr!';
@@ -108,7 +109,7 @@ function fangMakke() {
                 document.getElementById('makkeMelding').innerText = '';
             }, 2000);
         } else {
-            // Hvis sjanse er over 20, brukeren klarte ikke å fange en måke
+            // Hvis sjanse er over 25, brukeren klarte ikke å fange en måke
             const melding = 'Du klarte ikke å fange en måke!';
             document.getElementById('makkeMelding').innerText = melding;
 
@@ -124,13 +125,10 @@ function fangMakke() {
     }
 }
 
-function enableButton() {
-    // Implementer logikken for å aktivere knappen her
-    console.log("Knappen er nå aktivert");
-}
-
+//funcion for å stjele nabo katt
+let isButtonDisabled = false;
 function stjelNaboKatt() {
-    if (true) { // Du trenger ikke å sjekke for penger her
+    if (!isButtonDisabled) { // Sjekk om knappen er deaktivert
         // Legg til logikken for å stjele en nabo katt
         penger+=100;
         oppdaterPenger();
@@ -143,6 +141,8 @@ function stjelNaboKatt() {
             document.getElementById('katteMelding').innerText = '';
         }, 2000);
 
+        // Deaktiver knappen mens du venter på timeout
+        disableButton();
         // Sett opp en timeout for å låse knappen i 2 minutter
         setTimeout(function () {
             enableButton(); // Funksjon for å aktivere knappen igjen
@@ -150,18 +150,21 @@ function stjelNaboKatt() {
         }, 120000); // 2 minutter
     } 
 }
+function disableButton(){
+    isButtonDisabled = true;
+    // Implementer logikken for å deaktivere knappen (f.eks. endre stilen, legg til attributt disabled)
+    console.log("knappen er deaktivert")
+}
+
+
+function enableButton() {
+    // Implementer logikken for å aktivere knappen her
+    console.log("Knappen er nå aktivert");
+}
 
 
 
-
-
-
-
-
-
-
-
-
+//funcion for kebab kjøtt
 function kjopEkteKebab(){
     if (penger >= 1000){
         penger += 500;
@@ -179,11 +182,6 @@ function kjopEkteKebab(){
 
 
 
-
-
-
-
-
 //scroll funsjon 
 function scrollToNextSection() {
     let currentSection = document.querySelector('.section:not([style*="display: none;"])');
@@ -194,32 +192,39 @@ function scrollToNextSection() {
     }
 }
 
-
-
-// alle pop-up visninger ligger under
+// dette er functionene som viser info pop-Up siden i starten av spillet
 // Venter til vinduet er lastet ned 
 window.onload = function() {
     // Når vindu er lastet ned kjør denne funsjonen 
     showPopup();
 };
-
 // Viser  pop-up
 function showPopup() {
     var popUp = document.getElementById('popUp');
     popUp.showModal();
 }
-
 // function som lukker popup 
 function closePopup() {
     var popUp = document.getElementById('popUp');
     popUp.close();
 }
 
+function obsalPenger(){
+    if (penger >= 100000){
+        penger -= 100000;
+        oppdaterPenger();
+        window.location.href = 'gameover.html';
+    } else {
+        alert('Du har ikke nok penger!')
+    }
+}
 
 
 
 
 
+
+// alle pop-up visninger ligger under
 // alle disse er like i koden ikke i id
 function showRPopup() {
     let popUp = document.getElementById('rPopUp');
