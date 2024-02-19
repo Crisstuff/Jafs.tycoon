@@ -255,7 +255,7 @@ function showKPopup() {
     popUp.showModal();
     setTimeout(function() {
        popUp.close();
-    }, 2000); 
+    }, 2000); // Lukk popup etter 2000 millisekunder (2 sekunder)
 }
 
 
