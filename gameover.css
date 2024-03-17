@@ -1,0 +1,29 @@
+body{
+    background-image: url(bilder/confett.avif);
+    text-align: center;
+    background-size: cover;
+    color: white;
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 30px;
+}
+img{
+    border:  5px solid #FF8400;
+    
+}
+button{
+    font-size: 30px;
+    color: #1C1B20;
+    background-color: #FF8400;
+}
+button:hover { /*styling for alle av knappene i spillet */
+    background-color: #ffffff;
+    border: none;
+    color: #1C1B20;
+    transition: 3ms;
+  }

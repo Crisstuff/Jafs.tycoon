@@ -1,4 +1,4 @@
-let penger = 200;
+let penger = 100000;
 let antallRottefeller = 0;
 let antallRottefanget = 0;
 let antallMakkefanget = 0;
@@ -178,6 +178,7 @@ function kjopEkteKebab(){
         alert('Du har ikke nok penger!');
     }
 }
+
 
 
 
