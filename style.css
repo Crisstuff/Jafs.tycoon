@@ -30,6 +30,7 @@ html, body {
 }
 
 .section2{
+  margin-top: 150px;
   text-align: center;
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -133,6 +134,8 @@ dialog{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   width: 358px;
+  margin-top: 30px;
+  margin-left: 400px;
   border-radius: 6px;
 }
 
@@ -143,6 +146,7 @@ button{
   background-color: #FFFFFF;
   font-size: 23px;
   border: none;
+  margin: 10px;
   width: max-content;
 }
 button:hover { /*styling for alle av knappene i spillet */
