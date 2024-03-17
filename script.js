@@ -8,7 +8,6 @@ let antallKatterfanget = 0;
 function oppdaterPenger() {
     document.getElementById('penger').innerText = 'Du har: ' + penger + 'kr' + ' på kontoen';
 }
-
 function oppdaterRottefeller() {
     document.getElementById('rottefeller').innerText = 'Du har ' + antallRottefeller + ' Rottefelle';
     if (antallRottefeller >= 2){
